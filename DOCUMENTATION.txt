@@ -1,0 +1,38 @@
+﻿DOCUMENTATION
+
+
+This documentation is for an ‘end-to-end face detection and recognition system’
+
+
+To run the system install the dependencies and run the file app.py, model is trained to detect the faces of actors ‘Tom Cruise, Brad Pitt and Chris Evans and it can accept images and as well as videos 
+
+
+Steps in the projects:
+
+
+1) Data Collection: For this system, the type of images that are used are downloaded from Google and to download all the images at once the extension ‘download all images’ is used.
+Note:- If a good webcam or camera is present face extraction of people in real-time can be used to collect the data.
+
+
+2)Data Cleaning: The download data may contain some unsupported files and some duplicates so is it good to remove them before giving it to the model to train.
+Note:- refer ‘Data Cleaning.ipynb’ file for the code.
+
+
+3)Data preparation: The cleaning image may have multiple people so it is good to delete that file. And in this project, only takes images which have only single faces and resizes and saves the image in a way only the face will be seen
+Note:- refer ‘Data preparation.ipynb’ file for the code
+
+
+4)Model Creation: For this project the VGG model is used for training
+Note:- refer ‘model_training.ipynb’ file for the code
+
+
+5)Face recognition program: To detect the face MTCNN is used and the detected face will be given to the model to predict
+Note:- refer ‘Face recognition.ipynb’ file for the code
+
+5)Create UI: To create a UI in which the user will interact, the Python framework Tkinter is used.
+Note:- refer ‘ui.ipynb’ file for the code
+
+Other files:
+        :-vggface_model.h - It is the model that is trained on the data
+        :-haarcascade_frontalface_default.xml - For detecting faces in data preparation
+        :-Model evaluation - It is the notebook file where the model is evaluated.
